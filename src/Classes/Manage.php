@@ -2,6 +2,8 @@
 
 namespace Olekjs\Wolnelektury\Classes;
 
+use Illuminate\Support\Str;
+
 class Manage
 {
 
@@ -21,6 +23,7 @@ class Manage
     public function getBook($name)
     {
         $name = str_replace(' ', '-', $name);
+        $name = Str::lower($name);
 
         $url = "/books/{$name}";
 
@@ -65,12 +68,12 @@ class Manage
             'title'       => $response->get('title'),
             'photo'       => $response->get('cover'),
             'author'      => $response->get('authors')[0]['name'],
-            'rodzaj'      => $response->get('kinds')[0]['name'],
+            'category'    => $response->get('kinds')[0]['name'],
             'genres'      => $response->get('genres')[0]['name'],
             'epochs'      => $response->get('epochs')[0]['name'],
             'link_to_txt' => $response->get('txt'),
             'children'    => $response->get('children'),
-            'parent'      => $response->get('parent')
+            'parent'      => $response->get('parent'),
 
         ];
 
