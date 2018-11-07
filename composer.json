@@ -1,0 +1,12 @@
+{
+    "name": "olek/wolnelektury",
+    "description": "API connected with wolnelektury.pl service",
+    "type": "metapackage",
+    "authors": [
+        {
+            "name": "Olek",
+            "email": "kontakt@olekkaim.pl"
+        }
+    ],
+    "require": {}
+}
