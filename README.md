@@ -27,7 +27,7 @@ Facades
 ],
 ```
 
-## Publish config
+## Publish provider
 
 ```
 php artisan vendor:publish --provider=Olekjs\\Wolnelektury\\ServiceProvider
